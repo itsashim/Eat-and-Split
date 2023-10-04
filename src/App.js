@@ -66,6 +66,7 @@ export default function App() {
         <FormSplitBill
           handleSplitBill={handleSplitBill}
           selectFriend={selectFriend}
+          key={selectFriend.id}
         />
       )}
     </div>
@@ -87,7 +88,7 @@ function FriendList({ friends, handleSelectFriend, selectFriend }) {
   );
 }
 
-function Friend({ friend, handleSelectFriend, selectFriend }) {
+function Friend({ friend, handleSelectFriend, selectFriend, key }) {
   const isSelected = selectFriend?.id === friend.id;
 
   return (
